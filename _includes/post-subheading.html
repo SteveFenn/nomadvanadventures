@@ -1,0 +1,12 @@
+<div class="sub-heading">
+  <div class="wrapper">
+    <h2>{{ page.title }}</h2>
+    <ul class="meta">
+      {% if page.time_to_read %}
+        <li><i class="far fa-clock"></i> {{ page.time_to_read }} read</li>
+      {% endif %}
+      <li><i class="fas fa-tag"></i> {{ page.categories | join: ", "}}</li>
+      <li><i class="far fa-calendar"></i> {{ page.date | date: "%d/%m/%Y" }}</li>
+    </ul>
+  </div>
+</div>

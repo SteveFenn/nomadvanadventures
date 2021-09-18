@@ -12,9 +12,10 @@
   </head>
   <body>
     {{ content }}
-
+    {% include footer.html %}
     <!-- JS Files -->
     <script src="js/modernizr.js"></script>
+    <script src="https://kit.fontawesome.com/4cbed92f05.js" crossorigin="anonymous"></script>
     <script>
       window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
       ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')

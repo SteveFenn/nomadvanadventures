@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<header>
+  {% include top-bar.html %}
+  {% include post-subheading.html %}
+</header>
+<div class="content">
+  <main>
+    <div class="wrapper">
+      <article>
+        {{ content }}
+      </article>
+      {% include author.html %}
+    </div>
+  </main>
+</div>

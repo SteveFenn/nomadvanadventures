@@ -1,0 +1,19 @@
+$heading-color: #34495e;
+$body-text-color: #5D656C;
+$highlight-color: #e74c3c;
+$top-bar-background: #212121;
+$top-bar-text-color: #ffffff;
+$sub-heading-background: #ecf0f1;
+$footer-background: #212121;
+$footer-text-color: #a2a2a2;
+$footer-link-color: #fafafa;
+$link-color: #3498db;
+$link-hover-color: #2980b9;
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
