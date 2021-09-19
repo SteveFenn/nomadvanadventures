@@ -1,3 +1,37 @@
 ---
 layout: default
 ---
+<header>
+  {% include top-bar.html %}
+  <div class="quote">
+    <div class="wrapper">
+      <h2>
+        “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mauris libero, accumsan nec erat sagittis, pharetra porta sapien.
+        Pellentesque a risus ut ex dapibus scelerisque in non nulla. Curabitur ullamcorper neque nunc, quis venenatis ligula congue quis.
+        Donec in mauris porta, elementum velit nec, iaculis nisl. Nullam ipsum ante, sollicitudin pellentesque mollis non.”
+      </h2>
+      <p>Steves, KURUPT FM</p>
+    </div>
+  </div>
+</header>
+<div class="content">
+  <main>
+    <div class="wrapper">
+      <div class="articles">
+        {% for post in site.posts %}
+          <article class="snippet">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <ul class="meta">
+              {% if post.time_to_read %}
+                <li><i class="far fa-clock"></i> {{ post.time_to_read }} read</li>
+              {% endif %}
+              <li><i class="fas fa-tag"></i> {{ post.categories | join: ", "}}</li>
+              <li><i class="far fa-calendar"></i> {{ post.date | date: "%d/%m/%Y" }}</li>
+            </ul>
+            <p>{{ post.description }}... <a href="{{ post.url }}">continue reading</a></p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+</div>

@@ -104,25 +104,83 @@ header {
       margin: 0;
       padding: 0 0 3rem;
     }
+  }
+}
 
-    ul {
-      margin: 0;
-      padding: 0;
+.meta {
+  margin: 0;
+  padding: 0;
 
-      li {
-        display: inline-block;
-        margin-right: 3rem;
+  li {
+    display: inline-block;
+    margin-right: 3rem;
 
-        &:before {
-          display: none;
-        }
+    &:before {
+      display: none;
+    }
 
-        i {
-          margin-right: 0.3rem;
-          color: $highlight-color;
-        }
+    i {
+      margin-right: 0.3rem;
+      color: $highlight-color;
+    }
+  }
+}
+
+.quote {
+  padding: 3rem 0;
+  background-color: $sub-heading-background;
+
+  h2 {
+    margin: 0;
+    font-size: 4rem;
+    position: relative;
+
+    em {
+      display: block;
+      font-size: 15rem;
+      position: absolute;
+      color: $body-text-color;
+
+      &.left-quotation {
+        left: -10rem;
+        top: -3rem;
+      }
+
+      &.right-quotation {
+        right: -5rem;
+        bottom: 0rem;
       }
     }
+  }
+
+  p {
+    margin: 0;
+    padding: 2rem 0 0 0;
+    text-align: right;
+  }
+}
+
+.snippet {
+  padding: 0 0 2rem 0;
+  margin: 0 0 4rem 0;
+  border-bottom: 0.4rem solid $highlight-color;
+
+  h3 {
+    margin: 0 0 2rem;
+
+    a {
+      color: $heading-color;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+
+  &:last-child {
+    padding: 0;
+    margin: 0;
+    border-bottom: 0;
   }
 }
 
