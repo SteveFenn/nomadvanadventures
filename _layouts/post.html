@@ -10,6 +10,20 @@ layout: default
     <div class="wrapper">
       <article>
         {{ content }}
+
+        {% if page.previous %}
+          <div class="previous-post">
+            <h4><a href="{{ page.previous.url }}">Previous Post: {{ page.previous.title }}</a></h4>
+            <ul class="meta">
+              {% if page.previous.time_to_read %}
+                <li><i class="far fa-clock"></i> {{ page.previous.time_to_read }} read</li>
+              {% endif %}
+              <li><i class="fas fa-tag"></i> {{ page.previous.categories | join: ", "}}</li>
+              <li><i class="far fa-calendar"></i> {{ page.previous.date | date: "%d/%m/%Y" }}</li>
+            </ul>
+            <p>{{ page.previous.description }}... <a href="{{ post.url }}">continue reading</a></p>
+          </div>
+        {% endif %}
       </article>
       {% include author.html %}
     </div>

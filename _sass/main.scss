@@ -249,6 +249,24 @@ header {
   }
 }
 
+.previous-post {
+  padding: 8rem 0 0 0;
+  margin: 8rem 0 0 0;
+  border-top: 0.4rem solid $highlight-color;
+
+  h4 {
+    margin: 0 0 2rem;
+
+    a {
+      color: $heading-color;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}
+
 footer {
   background-color: $footer-background;
   color: $footer-text-color;
